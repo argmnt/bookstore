@@ -1,0 +1,18 @@
+version: '3.1'
+services:
+  app:
+    container_name: bookstoreapp
+    image: bookstoreapp
+    build: ../
+    ports:
+      - "80:8080"
+    depends_on:
+      - mongodb-bookstore
+    environment:
+      - MONGODB_URL=mongodb://mongodb-bookstore:27017/bookstore?authSource=admin
+  mongodb-bookstore:
+    container_name: mongodb-bookstore
+    image: mongodb-bookstore
+    build: ./dbdocker
+    expose:
+      - 27017

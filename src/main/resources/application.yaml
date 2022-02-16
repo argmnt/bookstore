@@ -1,0 +1,22 @@
+app:
+  security:
+    jwt:
+      keystore-location: keys/keystore.jks
+      keystore-password: 123456
+      key-alias: jwtsigning
+      private-key-passphrase: 123456
+      expiration-in-days: 365
+  url: ${APP_URL}
+
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+  data:
+    mongodb:
+      uri: ${MONGODB_URL}
+      auto-index-creation: true
+
+server:
+  error:
+    include-message: always
