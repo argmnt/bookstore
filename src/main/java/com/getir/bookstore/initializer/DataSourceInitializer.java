@@ -15,9 +15,6 @@ import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-import java.time.ZoneId;
-import java.time.ZoneOffset;
-import java.time.temporal.ChronoUnit;
 import java.util.List;
 
 @Component
@@ -48,17 +45,19 @@ public class DataSourceInitializer implements CommandLineRunner {
     }
 
     @Override
-    public void run(String... args) throws Exception {
+    public void run(String... args) {
         deleteEverything();
         var customer = createCustomer();
         customer = customerService.saveCustomer(customer);
 
-        createRandomOrders(customer, 2);
+        final int MONTH_GROUP_COUNT = 2;
+
+        createRandomOrders(customer, MONTH_GROUP_COUNT);
 
     }
 
     private Customer createCustomer() {
-        return Customer.builder().age(20).email("yagizgazibaba1996@hotmail.com").name("Yagiz")
+        return Customer.builder().age(20).email("admin@hotmail.com").name("Yagiz")
                 .password(passwordEncoder.encode("123456")).build();
     }
 
@@ -91,11 +90,6 @@ public class DataSourceInitializer implements CommandLineRunner {
                 .ISBN("1222300-34322").description(description)
                 .price(BigDecimal.valueOf(100.0)).build();
         return bookService.saveBook(book);
-    }
-
-    private static LocalDateTime getCurrentTime() {
-        return LocalDateTime.now().atZone(ZoneId.systemDefault())
-                .withZoneSameInstant(ZoneOffset.UTC).toLocalDateTime().truncatedTo(ChronoUnit.SECONDS);
     }
 
 }

@@ -125,7 +125,7 @@ public class OrderIntegrationTest {
     }
 
     public Order createOrder() {
-        var customer = Customer.builder().age(20).email("yagizgazibaba1996@hotmail.com").name("Yagiz").build();
+        var customer = Customer.builder().age(20).email("fowler@hotmail.com").name("Yagiz").build();
         var book = createBook("Kafka", "Donusum");
         var lineItem = createLineItem(book);
         var now = LocalDateTime.now().atZone(ZoneId.systemDefault())
