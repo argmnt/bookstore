@@ -9,7 +9,7 @@ You can create book, customer, order, inventory as well as get statistics.
 
 <br/>
 
-##Getting Started
+## Getting Started
 <p align="left">
 To use service, you need to only run 2 different steps; First create package then use docker compose command. Database and application will bring up and will be ready for usage:
 
@@ -38,15 +38,17 @@ I prepared swagger documentation. You can look this page for all controllers and
 <br/><br/>
 
 <h3 align="left">Tech Stack</h3>
+
 - Java 11
 - MongoDB 4.4
 - Spring Boot 2.6.3
 - Docker, Docker Compose
+
 <p align="left"> <a href="https://www.docker.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" width="40" height="40"/> </a> <a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/> </a> <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="postgresql" width="40" height="40"/> </a> <a href="https://spring.io/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" alt="spring" width="40" height="40"/> </a> </p>
 
+<br/>
 
-
-###Design Decisions
+### Design Decisions
 - For preventing partial updates, lost updates(Specific form of write skew) 
 and similiar concurrency issues I used;
     - Optimistic Locking with Versions.
@@ -65,7 +67,7 @@ and similiar concurrency issues I used;
 
 <br/><br/>
 
-#####Credentials:
+##### Credentials:
 <b>login</b>: admin@hotmail.com\
 <b>password</b>: 123456
 <br/><br/>
