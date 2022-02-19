@@ -6,7 +6,7 @@
 as **majority** for preventing data inconsistency that can be caused by primarydb failures which primarydb cannot be able to replicate its data to replicas. (Tunable consistency in MongoDB @see https://youtu.be/x5UuQL9rA1c?t=555)
 
 
-\
+<br/>
 <h3 align="left">Description:</h3>
 <p align="left">
 ReadingIsGood service is service that serve to ReadingIsGood firm that sells books online.
