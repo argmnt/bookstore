@@ -5,7 +5,7 @@
 🔴 Important [19th Feb 2022 : 03:12] Now I realized that I should have used write concern
 as **majority** for preventing data inconsistency that can be caused by primarydb failures which primarydb cannot be able to replicate its data to replicas. (Tunable consistency in MongoDB @see https://youtu.be/x5UuQL9rA1c?t=555)
 
-\
+
 \
 <h3 align="left">Description:</h3>
 <p align="left">
