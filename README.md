@@ -7,6 +7,15 @@ as **majority** for preventing data inconsistency that can be caused by primaryd
 
 
 <br/>
+
+<h4 align="left"><i>Self Criticism for My mistakes:</i></h4>
+
+- Get with body. :(
+- In some parts business logic layer and persistence layer mixed (Like order creation.). :(
+- Codes could have been cleaner. :(
+
+<br/>
+<br/>
 <h3 align="left">Description:</h3>
 <p align="left">
 ReadingIsGood service is service that serve to ReadingIsGood firm that sells books online.
